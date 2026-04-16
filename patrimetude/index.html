@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PatrimÉtude</title>
+  <script type="module" src="/src/main.js"></script>
+  <link rel="stylesheet" href="/src/styles/projects.css"/>
+  <style>
+    /* Reset et variables */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --font-sans: -apple-system, 'Segoe UI', system-ui, sans-serif;
+      --font-mono: 'Cascadia Code', 'Consolas', monospace;
+      --border-radius-sm: 4px;
+      --border-radius-md: 6px;
+      --border-radius-lg: 8px;
+      --color-background-primary: #ffffff;
+      --color-background-secondary: #f7f6f3;
+      --color-background-tertiary: #f0efe9;
+      --color-background-info: #e6f1fb;
+      --color-background-success: #e1f5ee;
+      --color-background-warning: #faeeda;
+      --color-background-danger: #fdecea;
+      --color-text-primary: #1a1a18;
+      --color-text-secondary: #5f5e5a;
+      --color-text-tertiary: #9e9c96;
+      --color-text-info: #0c447c;
+      --color-text-success: #085041;
+      --color-text-warning: #633806;
+      --color-text-danger: #8b1a14;
+      --color-border-primary: #1a1a18;
+      --color-border-secondary: #ccc9be;
+      --color-border-tertiary: #e5e3dc;
+      --color-border-info: #378add;
+      --color-border-success: #1d9e75;
+      --color-border-warning: #ba7517;
+      --color-border-danger: #d64035;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --color-background-primary: #1c1c1a;
+        --color-background-secondary: #242422;
+        --color-background-tertiary: #2a2a27;
+        --color-background-info: #0e2a45;
+        --color-background-success: #0b2e26;
+        --color-background-warning: #2e1d06;
+        --color-background-danger: #2e0e0c;
+        --color-text-primary: #f0efe9;
+        --color-text-secondary: #a8a69e;
+        --color-text-tertiary: #636059;
+        --color-text-info: #72b3e8;
+        --color-text-success: #4cc9a0;
+        --color-text-warning: #d4923a;
+        --color-text-danger: #e87171;
+        --color-border-secondary: #3d3c38;
+        --color-border-tertiary: #2e2d2a;
+        --color-border-info: #378add;
+        --color-border-success: #1d9e75;
+        --color-border-warning: #ba7517;
+        --color-border-danger: #d64035;
+      }
+    }
+    html, body {
+      height: 100%;
+      font-family: var(--font-sans);
+      background: var(--color-background-primary);
+      color: var(--color-text-primary);
+      overflow: hidden;
+    }
+    #app {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <!-- Rendu dynamique par main.js -->
+    <div style="flex:1;display:flex;align-items:center;justify-content:center;font-size:13px;color:#9e9c96">
+      Chargement…
+    </div>
+  </div>
+</body>
+</html>
