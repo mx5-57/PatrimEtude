@@ -1,4 +1,4 @@
-name: Compiler PatrimÉtude Windows
+name: Compiler PatrimEtude Windows
 on:
   push:
     branches: [ main ]
@@ -19,13 +19,16 @@ jobs:
         with:
           workspaces: src-tauri
 
-      - name: Installer dépendances
+      - name: Installer dependances
         run: npm install
 
-      - name: Compiler l'application
+      - name: Installer Tauri CLI
+        run: npx @tauri-apps/cli@1 --version
+
+      - name: Compiler application
         run: npx tauri build
 
-      - name: Publier l'installeur
+      - name: Publier installeur
         uses: actions/upload-artifact@v4
         with:
           name: PatrimEtude-Windows-Setup
@@ -33,3 +36,4 @@ jobs:
             src-tauri/target/release/bundle/nsis/*.exe
             src-tauri/target/release/bundle/msi/*.msi
           retention-days: 30
+          if-no-files-found: warn
