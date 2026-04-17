@@ -19,7 +19,7 @@
     },
     "bundle": {
       "active": true,
-      "targets": "all",
+      "targets": ["msi"],
       "identifier": "com.patrimetude.app",
       "icon": []
     },
